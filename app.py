@@ -39,8 +39,8 @@ classifier=keras.models.load_model('model.h5')
 
 
 
-class EmotionProcessor:
-  def recv(self, frame):
+class VideoTransformer:
+  def transform(self, frame):
     img =frame.to_ndarray(format="bgr24")
     img_gray= cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(image=img_gray, scaleFactor=1.3, minNeighbors=5)
@@ -117,11 +117,12 @@ def main():
 
 
   elif(selected=='Webcam'):
-    webrtc_streamer(key="key",mode=WebRtcMode.SENDRECV,video_processor_factory=EmotionProcessor,rtc_configuration=RTC_CONFIGURATION,media_stream_constraints={
+   
+    st.header("Webcam Live Feed")
+    st.write("Click on start to use webcam and detect your face emotion")
+    webrtc_streamer(key="example", video_transformer_factory=VideoTransformer,media_stream_constraints={
             "video": True,
-            "audio": False 
-        },async_processing=True)
-      
+            "audio": False },async_processing=True)
 
 if __name__=='__main__':
   main()
