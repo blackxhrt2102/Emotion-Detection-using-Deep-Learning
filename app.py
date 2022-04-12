@@ -58,7 +58,7 @@ class EmotionProcessor:
         output = str(finalout)
         label_position = (x, y)
         cv2.putText(img, output, label_position, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-    return av.VideoFrame.from_ndarray(img, format="bgr24")
+    return img
 #-------------------------------------------------------------------------------------------------------------
 # Main Page
 
