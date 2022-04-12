@@ -120,9 +120,9 @@ def main():
    
     st.header("Webcam Live Feed")
     st.write("Click on start to use webcam and detect your face emotion")
-    webrtc_streamer(key="example", video_transformer_factory=VideoTransformer,media_stream_constraints={
+    webrtc_streamer(key="example", video_transformer_factory=VideoTransformer,rtc_configuration=RTC_CONFIGURATION,mode=WebRtcMode.SENDRECV,media_stream_constraints={
             "video": True,
             "audio": False },async_processing=True)
-
+            
 if __name__=='__main__':
   main()
