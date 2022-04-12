@@ -95,7 +95,7 @@ def main():
     st.text('')
     st.text('')
     st.text('')
-    lottie_coding1=load_lottiefile("/content/66468-face-id-scan.json")
+    lottie_coding1=load_lottiefile("66468-face-id-scan.json")
     st_lottie(lottie_coding1,speed=1,reverse=False,loop=True,quality="low", height=300,width=500,key=None)
     st.text('')
     st.text('')
