@@ -33,7 +33,7 @@ RTC_CONFIGURATION = RTCConfiguration({"iceServers": [{"urls": ["stun:stun.l.goog
 
 
 #---------------------------------------------------------------------------------------------------------------
-emotion_dict = {0:'angry', 1 :'happy', 2: 'neutral', 3:'sad', 4: 'surprise',5:'j',6:'k'}
+emotion_dict = {0:'angry',5:'disgust',2:'fear',3:'happy',4:'neutral',6:'suprise',7:'sad'}
 
 classifier=keras.models.load_model('model.h5')
 #--------------------------------------------------------------------------------------------------------------
