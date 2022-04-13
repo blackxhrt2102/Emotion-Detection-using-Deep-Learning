@@ -79,8 +79,8 @@ def main():
   with st.sidebar:
     selected=option_menu(
             menu_title='Choose the Activity:-',  # required
-            options=['Home','Webcam','About'],  # required
-            icons=["clock", "book", "envelope"],  # optional
+            options=['Home','Webcam'],  # required
+            icons=["clock", "book"],  # optional
             menu_icon="cast",  # optional
             default_index=0,  # optional
             orientation="vertical",
