@@ -67,9 +67,9 @@ class Faceemotion(VideoTransformerBase):
 # Main Page
 
 def main():
-  st.set_page_config(page_title='Mooder', page_icon='😁',
+  st.set_page_config(page_title='Moody', page_icon='😁',
                    layout='centered', initial_sidebar_state='expanded')
-  st.title('Mooder 😁😭😱🙄')
+  st.title('Moody')
   html= """<div style="background-color:#ff9d9d;padding:0.3px">
                                     <h4 style="color:black;text-align:center;">
                                     Real time Facial Emotion detection application</h4>
